@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse justify-content-center">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">STAR FITNESS</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="classes.html">CLASSES</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1 style="text-align:center; font-size:30px">OUR CLASSES</h1>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="classexample.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="danceclass.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="classactivity.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="container-fluid bg-grey">
+<h2 style=";text-align:center; font-size:50px;background-color:black;color:red">LOOKING FOR FUN, VIGOROUS OR WANT TO TRY SOMETHING NEW?</h2>
+<p><strong>Yoga</strong></p>
+<p>
+<img src="hathayoga.jpg" style="float:right;width:300px;height:110px;">
+Yoga is an ancient physical and spiritual discipline and branch of philosophy that originated in India. Yoga helps in controlling an individual's mind, body and soul. It brings together physical and mental disciplines to achieve a peaceful body and mind; it reduces stress and anxiety. Looking for a time to relax? Do join our yoga classes at night!</p>
+
+<p><strong>Group X</strong></p>
+<p>
+<img src="groupx.jpg" style="float:left;width:300px;height:230px;">
+Group X activities include zumba, bums and tums, body toning, metafit, cardio conditioning, cardio pilates, shape up, power up. 
+</p>
+<p>COME JOIN OUR POPULAR CLASSES</p>
+<p>ZUMBA: With Zumba, you'll get a great cardio workout that melts fat, strengthens your core, and improves flexibility. </p>
+<p>METAFIT: MetaFit is the ultimate 45 minutes non-choreographed, bodyweight only HIIT workout. Created by a former Royal Marine Commando and gymnast Metafit combines the latest HIIT training techniques with traditional 'Old School' bodyweight exercises to set the metabolism on fire! A simple, uncomplicated workout that is exceptionally designed to give you results!</p>
+<p>CARDIO CONDITIONING: Cardio conditioning is a form of exercise which is designed to promote cardiovascular health. In this form of exercise, the heart rate is elevated and kept high for a period of time which can vary, depending on fitness level and goals.</p>
+
+<p><strong>Martial Arts</strong></p>
+<p>
+<img src="karate.jpg" style="float:right;width:200px;height:300px;">
+Starfitness offers a variety of martial arts: boxing, kick boxing, mixed martial arts, brazilian jiu jitsu, grappling and karate.</p>
+<p>POPULAR CHOICES</p>
+<p> BOXING: Boxing is the ultimate full body workout. Correctly thrown punches use your legs, hips, glutes, core, obliques, back, shoulders, chest and arms. Punching against resistance causes all of these muscles to contract with more force and speed, developing further your strength and power.</p>
+<p> KICK BOXING: Learn self-defence, increase your fitness levels and engage your entire body.  The benefits of kickboxing are numerous, strengthening your core, arms and shoulders to your legs and glutes while increasing your stamina — and provides a tough cardio workout to boot your energy.</p>
+<p>MIXED MARTIAL ART: Mixed Martial Arts (MMA) training has exploded in popularity recently. MMA is a fantastic way to get in better shape, mentally and physically.</p>
+<p>KARATE: Karate training can burn many calories and can assist you in improving your health. Karate is also linked to improved cardiovascular health and building strength and balance.</p>
+<p>Some people ask "What's so special about the mixed martial arts?" Well, our karate class is offered to both children and adult!" Fear your child is not having enough exercise? Join our children's karate class!</p>
+
+<hr>
+<img src="location.jpg" style="width:100%">
+
+</body>
+</html>
